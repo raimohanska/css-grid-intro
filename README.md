@@ -75,3 +75,13 @@ The form components are laid out in two rows and we want to align them in a neat
 
 This is a perfect case for CSS Grid. [Here](https://codepen.io/raimohanska/pen/dyZYvzr)'s how.
 ```
+
+## Tables
+
+I'd very much like to style my `<table>`s with Grid as well. 
+
+To start with, [here](https://codepen.io/raimohanska/pen/xxPwrEg) is an example of a table, with some column width tuning- the center column is to take up all the remaining space. This can be implemented with `width: 100%`, which feels a bit wrong. Certainly there's no 100% to be given to the column when the other columns need some with as well.
+
+I can style a table with CSS Grid like [this](https://codepen.io/raimohanska/pen/zYPvzdo). Now, because a semantically correct `<table>` is not a flat collection of cells (they are nested within `<tbody>` and `<tr>`), the Grid doesn't apply well by default. However, this can be fixed by applying the `display: contents` style on the intermediary elements, so that the `<td>`s and `<th>`s will be laid out on the grid. Nice! And with grid, I get far superior control over column widths, as I can use the `fr` unit among other units here.
+
+Alas, there's a drawback I don't know how to fix yet: the nice _row hover_ feature in the first example gets broken, as it doesn't seem to play ball with `display: contents`. Therefore, at least for now, I'm back with normal table layout in cases where there is anything I want to do on the row level.
