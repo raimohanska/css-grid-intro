@@ -74,7 +74,6 @@ really useful tool though. Here's a formish thing to lay out.
 The form components are laid out in two rows and we want to align them in a neat grid. Once again, we don't want to specify exact pixel widths for each component, but instead have a responsive UI.
 
 This is a perfect case for CSS Grid. [Here](https://codepen.io/raimohanska/pen/dyZYvzr)'s how.
-```
 
 ## Tables
 
